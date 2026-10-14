@@ -107,6 +107,28 @@ button:focus-visible,a:focus-visible{outline:3px solid var(--green);outline-offs
 .allyear .list .ficha{--s:var(--health)}
 .allyear .list .ficha.compost{--s:var(--green)}
 
+/* o que semear e plantar */
+.sow{border-top:1px dashed color-mix(in srgb,var(--s) 45%,transparent);padding-top:12px;display:grid;gap:9px}
+.sow h3{font-size:1.05rem;color:var(--s)}
+.sow .row{display:grid;gap:5px}
+.sow .row>b{font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--s)}
+.crops{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:5px}
+.crops li{background:var(--panel);border:1px solid var(--line);border-radius:99px;padding:2px 10px;font-size:.88rem;line-height:1.3;display:inline-flex;align-items:center;gap:5px}
+.crops li.alv::before,.sow .key i{content:"";width:8px;height:8px;border-radius:50%;background:var(--s);flex:none;display:inline-block}
+.sow .trad,.sow .key{margin:0;font-size:.85rem;color:var(--muted);line-height:1.4}
+.sow .trad b{color:var(--ink)}
+.sow .key a{color:var(--s);font-weight:700}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* fontes */
+.refs{border-top:1px solid var(--line);padding-top:10px;font-size:.86rem;color:var(--muted)}
+.refs summary{cursor:pointer;font-weight:700;color:var(--ink);font-size:.95rem}
+.refs h4{margin:12px 0 4px;color:var(--ink);font-size:.9rem}
+.refs p{margin:6px 0}
+.refs ul{margin:4px 0;padding-left:18px}
+.refs ol{margin:4px 0;padding-left:20px;display:grid;gap:6px}
+.refs a{color:var(--green);word-break:break-all}
+
 footer{font-size:.8rem;color:var(--muted);border-top:1px solid var(--line);padding-top:10px}
 
 @media (max-width:760px){
@@ -161,6 +183,28 @@ footer{font-size:.8rem;color:var(--muted);border-top:1px solid var(--line);paddi
     <div class="list" id="allyear"></div>
   </section>
 
+  <section class="refs" id="referencias">
+    <details>
+      <summary>O que semear e plantar: fontes e diferenças entre regiões</summary>
+      <p>Os meses de sementeira e plantação seguem o calendário das zonas do litoral de Portugal continental, do Minho a Setúbal e ao Vale do Tejo [1]. As notas de tradição vêm do Almanaque Borda d’Água [2] e do calendário anual da horta da Câmara Municipal de Guimarães [3]. A distinção entre o que se semeia em alvéolos e o que se semeia diretamente na terra segue as fichas técnicas do Projeto Horta na Escola [4] e o calendário [1].</p>
+      <h4>Ajustar à sua região</h4>
+      <ul>
+        <li><b>Interior norte e serras</b> (Vila Real, Bragança, Guarda, Viseu): as culturas de verão atrasam cerca de um mês. Tomate, pimento e beringela semeiam-se em março e abril e plantam-se da segunda quinzena de maio a junho; curgete, pepino, abóbora e feijão-verde semeiam-se da segunda quinzena de maio a junho; o alho planta-se em outubro e novembro [1].</li>
+        <li><b>Alentejo e Beira Baixa</b>: tomate, pimento e beringela semeiam-se em fevereiro e março e plantam-se da segunda quinzena de abril a maio; a batata planta-se em fevereiro e março; a cebola semeia-se em setembro e outubro e planta-se de novembro a janeiro [1].</li>
+        <li><b>Algarve</b>: tomate, pimento e beringela semeiam-se de janeiro a março e plantam-se de março a maio; a batata planta-se de janeiro a março e também em agosto e setembro; o alho planta-se de outubro a dezembro [1].</li>
+        <li>As datas são um ponto de partida: cada horta ajusta-as ao seu microclima e ao tempo de cada ano [1].</li>
+      </ul>
+      <h4>Referências</h4>
+      <ol>
+        <li>Hortas Biológicas. (2022, 19 de janeiro; atualizado em 2026). <i>Calendário da horta por regiões em Portugal: O que semear, plantar e colher em cada zona</i>. Hortas Biológicas. Usa as Normais Climatológicas 1991–2020 do Instituto Português do Mar e da Atmosfera (IPMA) para o risco de geada. <a href="https://www.hortasbiologicas.pt/calendario-da-horta-por-regioes-em-portugal/" target="_blank" rel="noopener">https://www.hortasbiologicas.pt/calendario-da-horta-por-regioes-em-portugal/</a></li>
+        <li>Hortas Biológicas. (2018, dezembro; atualizado em 2025). <i>Almanaque Borda d’Água: Calendário agrícola</i>. Hortas Biológicas. Resumo das indicações do Almanaque Borda d’Água (Editorial Minerva). <a href="https://www.hortasbiologicas.pt/calendario-borda/" target="_blank" rel="noopener">https://www.hortasbiologicas.pt/calendario-borda/</a></li>
+        <li>Câmara Municipal de Guimarães. (s.d.). <i>Calendarização anual: Calendário anual da horta</i>. Câmara Municipal de Guimarães. <a href="https://www.cm-guimaraes.pt/cmguimaraes/uploads/writer_file/document/4163/CALEND_RIO_ANUAL_HORTA.pdf" target="_blank" rel="noopener">https://www.cm-guimaraes.pt/cmguimaraes/uploads/writer_file/document/4163/CALEND_RIO_ANUAL_HORTA.pdf</a></li>
+        <li>Rau, P. (técnico responsável). (s.d.). <i>Projeto Horta na Escola: Fichas técnicas de apoio ao cultivo</i> (Ficha Técnica 02, Calendário hortícola, e Ficha Técnica 03). Câmara Municipal de Lisboa. <a href="https://informacoeseservicos.lisboa.pt/fileadmin/informacoes_servicos/pedidos/ambiente/14_Fichas_Tecnicas_apoio_cultivo.pdf" target="_blank" rel="noopener">https://informacoeseservicos.lisboa.pt/fileadmin/informacoes_servicos/pedidos/ambiente/14_Fichas_Tecnicas_apoio_cultivo.pdf</a></li>
+      </ol>
+      <p>Endereços consultados em outubro de 2026.</p>
+    </details>
+  </section>
+
   <footer>Proposta de planeamento do Manual de Apoio ao Professor do 1.º Ciclo · Mercado “À Mão de Semear” · Agrupamento de Escolas João Villaret · Escola Básica do Fanqueiro · Unidade de Cuidados na Comunidade (UCC) de Loures. É uma orientação geral: cada escola adapta ao seu clima e região.</footer>
 </div>
 
@@ -168,7 +212,48 @@ footer{font-size:.8rem;color:var(--muted);border-top:1px solid var(--line);paddi
 (function(){
 // Recursos online já publicados (acrescentar aqui os novos links).
 const ONLINE = {
-  15:{label:"Dominó online", url:"https://domino-da-horta.vercel.app"}
+  15:{label:"Dominó online", url:"https://domino-da-horta.vercel.app"},
+  21:{label:"Jogo online", url:"https://hotel-de-insetos.vercel.app"},
+  28:{label:"Jogo online", url:"https://vai-para-o-compostor.vercel.app"}
+};
+// O que semear e plantar em cada mês (litoral de Portugal continental; fontes em #referencias).
+// alv: semeia-se em alvéolos ou alfobre e planta-se depois; sem alv: semeia-se diretamente na terra.
+const CROPS = {
+  tomate:{n:"tomate",alv:1}, pimento:{n:"pimento",alv:1}, beringela:{n:"beringela",alv:1},
+  curgete:{n:"curgete"}, pepino:{n:"pepino"}, abobora:{n:"abóbora"}, feijao:{n:"feijão-verde"},
+  ervilha:{n:"ervilha"}, fava:{n:"fava"}, alface:{n:"alface",alv:1}, espinafre:{n:"espinafre"},
+  acelga:{n:"acelga",alv:1}, couve:{n:"couve-galega",alv:1}, brocolos:{n:"brócolos",alv:1},
+  cenoura:{n:"cenoura"}, beterraba:{n:"beterraba"}, rabanete:{n:"rabanete"},
+  cebola:{n:"cebola",alv:1}, alhofr:{n:"alho-francês",alv:1}, salsa:{n:"salsa"}, coentros:{n:"coentros"},
+  manjericao:{n:"manjericão",alv:1},
+  alho:{n:"alho (dentes)"}, batata:{n:"batata (batata-semente)"}
+};
+const SOW = {
+  setembro:{s:["alface","espinafre","acelga","rabanete","cebola","salsa","coentros"],
+            p:["couve","brocolos","alface","acelga"],
+            trad:"<b>Tradição:</b> semear nabos e nabiças e, com as primeiras chuvas, plantar morangueiros [2, 3]."},
+  outubro:{s:["ervilha","fava","espinafre","alface","rabanete","cebola","salsa","coentros"],
+           p:["alface","acelga","alho"],
+           trad:"<b>Tradição:</b> no fim do mês plantam-se morangueiros e couves de primavera [2]."},
+  novembro:{s:["ervilha","fava","espinafre","alface","rabanete","coentros"],
+            p:["alface","cebola","alho"],
+            trad:"<b>Tradição:</b> semear tremoço e nabo [3]."},
+  dezembro:{s:["ervilha","fava","espinafre"], p:["alface","cebola","alho"]},
+  janeiro:{s:["ervilha","espinafre"], p:["cebola"],
+           trad:"Mês de pouca sementeira ao ar livre: bom para planear e preparar os alvéolos de fevereiro."},
+  fevereiro:{s:["tomate","pimento","beringela","ervilha","espinafre","alface","acelga","cenoura","beterraba","rabanete","alhofr","salsa","coentros"],
+             p:["batata","cebola"],
+             trad:"Tomate, pimento e beringela semeiam-se em alvéolos num lugar abrigado do frio."},
+  marco:{s:["tomate","pimento","beringela","ervilha","espinafre","alface","acelga","cenoura","beterraba","rabanete","alhofr","salsa","coentros","manjericao"],
+         p:["alface","acelga","batata"]},
+  abril:{s:["curgete","pepino","abobora","feijao","alface","acelga","cenoura","beterraba","rabanete","alhofr","salsa","coentros","manjericao"],
+         p:["tomate","pimento","beringela","batata","alface","acelga"],
+         trad:"Pimento e beringela plantam-se a partir da segunda quinzena, já sem risco de geada."},
+  maio:{s:["curgete","pepino","abobora","feijao","couve","brocolos","acelga","cenoura","beterraba","rabanete","alhofr","salsa","coentros","manjericao"],
+        p:["tomate","pimento","beringela","alface","acelga","alhofr","manjericao"]},
+  junho:{s:["curgete","pepino","abobora","feijao","couve","brocolos","cenoura","beterraba"],
+         p:["acelga","alhofr","manjericao"],
+         trad:"<b>Nas férias:</b> em julho semeiam-se curgete, feijão-verde, couve-galega, brócolos, cenoura e beterraba e plantam-se couve-galega, brócolos e alho-francês; em agosto semeiam-se alface, acelga, cenoura, beterraba e rabanete [1]."}
 };
 
 const ALL=[1,2,3,4];
@@ -276,6 +361,19 @@ function renderMonths(){
   $("months").querySelectorAll(".month").forEach(b=>b.addEventListener("click",()=>go(+b.dataset.i)));
 }
 
+function cropList(keys,dot){
+  return `<ul class="crops">${keys.map(k=>{ const c=CROPS[k], alv=dot&&c.alv; return `<li class="${alv?"alv":""}">${c.n}${alv?'<span class="sr"> (em alvéolos)</span>':""}</li>`; }).join("")}</ul>`;
+}
+function sowBlock(m){
+  const d=SOW[m.k]; if(!d) return "";
+  return `<div class="sow">
+        <h3>O que se pode semear e plantar</h3>
+        <div class="row"><b>🌱 Semear</b>${cropList(d.s,true)}</div>
+        <div class="row"><b>🪴 Plantar</b>${cropList(d.p,false)}</div>
+        ${d.trad?`<p class="trad">${d.trad}</p>`:""}
+        <p class="key"><i aria-hidden="true"></i> semear em alvéolos ou alfobre e plantar mais tarde (Ficha 26); as outras semeiam-se diretamente na terra. Datas para o litoral de Portugal continental: <a href="#referencias" data-refs>ver fontes e outras regiões</a>.</p>
+      </div>`;
+}
 function renderView(){
   const m=MONTHS[cur], v=$("view");
   v.className="month-view enter m-"+m.s;
@@ -288,6 +386,7 @@ function renderView(){
       <h2>${m.name}</h2>
       <p class="theme">${m.theme}</p>
       <ul class="tasks">${m.tasks.map(t=>`<li><span class="ic" aria-hidden="true">${t[0]}</span><b>${t[1]}</b><span>${t[2]}</span></li>`).join("")}</ul>
+      ${sowBlock(m)}
       <div class="nav">
         <button type="button" id="prev" ${prev?"":"hidden"}>← ${prev?prev.name:""}</button>
         <button type="button" id="next" ${next?"":"hidden"}>${next?next.name:""} →</button>
@@ -299,6 +398,9 @@ function renderView(){
     </div>`;
   const p=$("prev"), n=$("next");
   p && p.addEventListener("click",()=>go(cur-1));
+  v.querySelectorAll("[data-refs]").forEach(a=>a.addEventListener("click",e=>{
+    e.preventDefault(); const r=$("referencias"); r.querySelector("details").open=true; r.scrollIntoView({behavior:"smooth",block:"start"});
+  }));
   n && n.addEventListener("click",()=>go(cur+1));
   $("allyear").innerHTML = ALLYEAR.map(a=>fichaCard(a.n,{allYear:true,cls:a.cls})).join("");
 }
